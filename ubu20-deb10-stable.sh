@@ -313,7 +313,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 <code>ISP      :</code><code>$ISP</code>
 <code>Exp Sc.  :</code><code>$exp</code>
 <code>────────────────────</code>
-        <b>🇮🇩🇮🇩 VPN - LITE🇮🇩🇮🇩</b>
+   <b>🇮🇩🇮🇩 VPN - LITE🇮🇩🇮🇩</b>
 <code>────────────────────</code>
 <i>Automatic Notifications From Github</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/6283867809137"}]]}' 
