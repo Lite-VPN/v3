@@ -1,12 +1,11 @@
 #!/bin/bash
 MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
-read -p "Masukan Domain (contoh :  sayang80)" domen
-DOMAIN=mypremium.biz.id
+read -p "Masukan Domain (contoh :  server)" domen
+DOMAIN=vpnlite.cloud
 sub=${domen}
 #(</dev/urandom tr -dc a-z0-9 | head -c5)
-dns=${sub}.mypremium.biz.id
-CF_ID=andyyuda41@gmail.com
+dns=${sub}.vpnlite.cloud
 CF_KEY=0d626234700bad388d6d07b49c42901445d1c
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
@@ -39,5 +38,5 @@ echo "$dns" > /root/scdomain
 echo "$dns" > /etc/xray/domain
 echo "$dns" > /etc/v2ray/domain
 echo "$dns" > /etc/xray/scdomain
-echo "IP=$dns" > /var/lib/kyt/ipvps.conf
+echo "IP=$dns" > /var/lib/lite/ipvps.conf
 cd
