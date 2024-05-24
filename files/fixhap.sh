@@ -58,7 +58,7 @@ clear
 
 
 
-REPO="https://github.com/Lite-VPN/v3/blob/main"
+REPO="https://github.com/Lite-VPN/v3/blob/main/config/haproxy.cfg"
 # fixhap fix Haproxy
 clear
 echo -e "${BlueCyan} ------------------------- ${Xark} "
