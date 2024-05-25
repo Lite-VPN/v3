@@ -1,29 +1,21 @@
 #!/bin/bash
 
-purple() { echo -e "\\033[35;1m${*}\\033[0m"; }
-tyblue() { echo -e "\\033[36;1m${*}\\033[0m"; }
-yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-
-
 cd
-rm -rf /etc/udp-custom
-mkdir -p /etc/udp-custom
+rm -rf /root/udp
+mkdir -p /root/udp
 
-sleep 1
 # change to time GMT+7
-red "change to time GMT+7"
+echo "change to time GMT+7"
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # install udp-custom
-green "downloading udp-custom"
-curl -Lk "https://raw.githubusercontent.com/feely666/udp-custom/main/udp-custom-linux-amd64" -o /etc/udp-custom/udp-custom
-chmod +x /etc/udp-custom/udp-custom
+echo downloading udp-custom
+wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1ixz82G_ruRBnEEp4vLPNF2KZ1k8UfrkV' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1ixz82G_ruRBnEEp4vLPNF2KZ1k8UfrkV" -O /root/udp/udp-custom && rm -rf /tmp/cookies.txt
+chmod +x /root/udp/udp-custom
 
-green "downloading default config"
-curl -Lk "https://raw.githubusercontent.com/feely666/udp-custom/main/config.json" -o /etc/udp-custom/config.json
-chmod 644 /etc/udp-custom/config.json
+echo downloading default config
+wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1klXTiKGUd2Cs5cBnH3eK2Q1w50Yx3jbf' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1klXTiKGUd2Cs5cBnH3eK2Q1w50Yx3jbf" -O /root/udp/config.json && rm -rf /tmp/cookies.txt
+chmod 644 /root/udp/config.json
 
 if [ -z "$1" ]; then
 cat <<EOF > /etc/systemd/system/udp-custom.service
@@ -33,8 +25,8 @@ Description=UDP Custom by ePro Dev. Team
 [Service]
 User=root
 Type=simple
-ExecStart=/etc/udp-custom/udp-custom server
-WorkingDirectory=/etc/udp-custom/
+ExecStart=/root/udp/udp-custom server
+WorkingDirectory=/root/udp/
 Restart=always
 RestartSec=2s
 
@@ -49,8 +41,8 @@ Description=UDP Custom by ePro Dev. Team
 [Service]
 User=root
 Type=simple
-ExecStart=/etc/udp-custom/udp-custom server -exclude $1
-WorkingDirectory=/etc/udp-custom/
+ExecStart=/root/udp/udp-custom server -exclude $1
+WorkingDirectory=/root/udp/
 Restart=always
 RestartSec=2s
 
@@ -59,8 +51,11 @@ WantedBy=default.target
 EOF
 fi
 
-tyblue "start service udp-custom"
+echo start service udp-custom
 systemctl start udp-custom &>/dev/null
 
-tyblue "enable service udp-custom"
+echo enable service udp-custom
 systemctl enable udp-custom &>/dev/null
+
+echo reboot
+reboot
