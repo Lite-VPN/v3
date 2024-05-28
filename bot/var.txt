@@ -1,0 +1,3 @@
+BOT_TOKEN="6601733206:AAG040lT7pjkZtQxrme8v2nraMYtwrCmQsg"
+ADMIN="1210833546"
+DOMAIN="sts.myridttunnel.my.id"
