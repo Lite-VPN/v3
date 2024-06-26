@@ -19,13 +19,13 @@ apt update && apt upgrade
 apt install neofetch -y
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://raw.githubusercontent.com/diah082/newbie/main/Bot/bot.zip
+wget https://raw.githubusercontent.com/Lite-VPN/v3/tree/main/botbot.zip
 unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget https://raw.githubusercontent.com/diah082/newbie/main/Bot/kyt.zip
+wget https://raw.githubusercontent.com/Lite-VPN/v3/tree/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
 
