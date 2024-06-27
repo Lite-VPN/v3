@@ -2,7 +2,6 @@
 NS=$( cat /etc/xray/dns )
 PUB=$( cat /etc/slowdns/server.pub )
 domain=$(cat /etc/xray/domain)
-#color
 
 cd /etc/systemd/system/
 rm -rf kyt.service
@@ -19,7 +18,7 @@ apt update && apt upgrade
 apt install neofetch -y
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://raw.githubusercontent.com/Lite-VPN/v3/tree/main/botbot.zip
+wget https://raw.githubusercontent.com/Lite-VPN/v3/tree/main/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
@@ -31,7 +30,7 @@ pip3 install -r kyt/requirements.txt
 
 #isi data
 echo ""
-figlet  Newbie Vpn  | lolcat
+figlet  LITE  | lolcat
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[1;97;101m          ADD BOT PANEL          \e[0m"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
