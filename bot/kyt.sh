@@ -2,7 +2,7 @@
 NS=$( cat /etc/xray/dns )
 PUB=$( cat /etc/slowdns/server.pub )
 domain=$(cat /etc/xray/domain)
-
+#color
 cd /etc/systemd/system/
 rm -rf kyt.service
 cd
@@ -12,22 +12,17 @@ NC='\e[0m'
 cd /usr/bin
 rm -rf kyt
 rm kyt.*
-rm -rf bot
-rm bot.*
 apt update && apt upgrade
 apt install neofetch -y
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://raw.githubusercontent.com/Lite-VPN/v3/tree/main/bot.zip
-unzip bot.zip
-mv bot/* /usr/bin
-chmod +x /usr/bin/*
-rm -rf bot.zip
-clear
-wget https://raw.githubusercontent.com/Lite-VPN/v3/tree/main/bot/kyt.zip
+wget https://raw.githubusercontent.com/Lite-VPN/v3/tree/main/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
-
+mv kyt/* /usr/bin
+chmod +x /usr/bin/*
+rm -rf kyt.zip
+clear
 #isi data
 echo ""
 figlet  LITE  | lolcat
