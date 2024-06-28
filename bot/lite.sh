@@ -10,16 +10,24 @@ grenbo="\e[92;1m"
 YELL='\033[0;33m'
 BGX="\033[42m"
 #install
-apt update -y && apt upgrade -y
-apt install python3 python3-pip git speedtest-cli -y
 cd /usr/bin
+rm -rf lite
+rm lite.*
+rm -rf bot
+rm bot.*
+apt update && apt upgrade
+apt install neofetch -y
+apt install python3 python3-pip git
+cd /usr/bin
+wget https://raw.githubusercontent.com/Lite-VPN/v3/main/bot/bot.zip
+unzip bot.zip
+mv bot/* /usr/bin
+chmod +x /usr/bin/*
+rm -rf bot.zip
 clear
-wget https://raw.githubusercontent.com/Lite-VPN/v3/main/bot/lite.zip &> /dev/null
-unzip lite.zip &> /dev/null
+wget https://raw.githubusercontent.com/Lite-VPN/v3/main/bot/lite.zip
+unzip lite.zip
 pip3 install -r lite/requirements.txt
-chmod +x *
-mv -f * /usr/bin
-rm -rf /usr/bin/lite.zip
 ipsaya=$(wget -qO- ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
