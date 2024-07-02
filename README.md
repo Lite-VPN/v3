@@ -7,4 +7,4 @@ apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubu
 ```
 wget -q https://raw.githubusercontent.com/Lite-VPN/v3/main/update.sh && chmod +x update.sh && ./update.sh
 ```
-## PENGEN PUNYA AYANG🗿
+## INGFO CEWEKK🗿
