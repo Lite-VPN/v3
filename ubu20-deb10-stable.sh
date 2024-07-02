@@ -23,9 +23,9 @@ clear && clear && clear
 clear;clear;clear
 
   # // Banner
-echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Auther : ${green}VPN - LITE ® ${NC}${YELLOW}(${NC} ${green} LITE-VPN-TUNNELING ${NC}${YELLOW})${NC}"
-echo -e "${YELLOW}----------------------------------------------------------${NC}"
+echo -e "${YELLOW}_____________________________________${NC}"
+echo -e "  EDIT BY : ${green}LITE  ${NC}${YELLOW}(${NC} ${green} TUNNELING-NETWORK${NC}${YELLOW})${NC}"
+echo -e "${YELLOW}_____________________________________${NC}"
 echo ""
 sleep 2
 ###### IZIN SC 
@@ -92,9 +92,9 @@ function print_ok() {
     echo -e "${OK} ${BLUE} $1 ${FONT}"
 }
 function print_install() {
-	echo -e "${green} =============================== ${FONT}"
+	echo -e "${green} ☉━━━━━━━━━━━━━━━━━━━━━━━☉ ${FONT}"
     echo -e "${YELLOW} # $1 ${FONT}"
-	echo -e "${green} =============================== ${FONT}"
+	echo -e "${green} ☉━━━━━━━━━━━━━━━━━━━━━━━☉ ${FONT}"
     sleep 1
 }
 
@@ -104,9 +104,9 @@ function print_error() {
 
 function print_success() {
     if [[ 0 -eq $? ]]; then
-		echo -e "${green} =============================== ${FONT}"
+		echo -e "${green} ☉━━━━━━━━━━━━━━━━━━━━━━━☉ ${FONT}"
         echo -e "${Green} # $1 berhasil dipasang"
-		echo -e "${green} =============================== ${FONT}"
+		echo -e "${green} ☉━━━━━━━━━━━━━━━━━━━━━━━☉ ${FONT}"
         sleep 2
     fi
 }
@@ -305,7 +305,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
 <code>────────────────────</code>
-<b>⚡AUTOSCRIPT PREMIUM⚡</b>
+<b>🍄 AUTOSCRIPT LITE 🍄</b>
 <code>────────────────────</code>
 <code>User     :</code><code>$username</code>
 <code>Domain   :</code><code>$domain</code>
@@ -313,7 +313,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 <code>ISP      :</code><code>$ISP</code>
 <code>Exp Sc.  :</code><code>$exp</code>
 <code>────────────────────</code>
-   <b>🇮🇩🇮🇩 VPN - LITE🇮🇩🇮🇩</b>
+   <b>🔑 LITE VERMILION 🔑</b>
 <code>────────────────────</code>
 <i>Automatic Notifications From Github</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/6283867809137"}]]}' 
