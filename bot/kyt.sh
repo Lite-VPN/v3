@@ -28,6 +28,7 @@ clear
 wget https://raw.githubusercontent.com/Lite-VPN/v3/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
+clear
 
 #isi data
 echo ""
