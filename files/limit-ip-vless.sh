@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+chmod +x limit-ip-vless.sh && ./limit-ip-vlees.sh
 
 echo -n > /var/log/xray/vless.log
 sleep 2
