@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+chmod +x limit-ip-vmess.sh && ./limit-ip-vmess.sh
 
 echo -n > /var/log/xray/vmess.log
 sleep 2
