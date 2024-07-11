@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
+chmod +x limit-ip-trojan.sh && ./limit-ip-trojan.sh
 echo -n > /var/log/xray/trojan.log
 sleep 2
 data=( `ls /etc/kyt/limit/trojan/ip`);
