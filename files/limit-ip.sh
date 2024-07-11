@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+chmod +x limit-ip.sh && ./limit-ip.sh
 
 function send_log(){
 domen=`cat /etc/xray/domain`
