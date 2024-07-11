@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-chmod +x xraylimit.sh && ./xraylimit.sh
+#!/usr/bin/bash
 
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
