@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+chmod +x limit-ip-ssh.sh && ./limit-ip-ssh.sh
+
 mulog=$(member)
 date=$(date)
 data=( `ls /etc/kyt/limit/ssh/ip`);
