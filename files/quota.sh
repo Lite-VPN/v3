@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-chmod +x quota.sh && ./quota.sh
+#!/usr/bin/bash
 
 function send-log(){
 CHATID=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 3)
